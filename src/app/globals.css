@@ -1,0 +1,147 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* French business accessibility support */
+.high-contrast {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.reduced-motion {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+.font-normal { font-size: 1rem; }
+.font-large { font-size: 1.125rem; }
+.font-extra-large { font-size: 1.25rem; }
+
+/* Focus styles for French accessibility compliance (RGAA) */
+*:focus {
+  outline: 2px solid #1e40af;
+  outline-offset: 2px;
+}
+
+/* Ensure minimum touch target size for mobile */
+button, a, input, textarea, select {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* French business form styling */
+.fr-form-group {
+  @apply space-y-2;
+}
+
+.fr-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.fr-input {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-french-blue-500 focus:ring-french-blue-500 sm:text-sm;
+}
+
+.fr-error {
+  @apply text-sm text-red-600;
+}
+
+.fr-help-text {
+  @apply text-sm text-gray-500;
+}
+
+/* Compliance status indicators */
+.compliance-indicator {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.compliance-indicator.compliant {
+  @apply bg-compliance-green-100 text-compliance-green-800;
+}
+
+.compliance-indicator.non-compliant {
+  @apply bg-urgent-red-100 text-urgent-red-800;
+}
+
+.compliance-indicator.pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Invoice status styling */
+.invoice-status {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.invoice-status.draft {
+  @apply bg-admin-gray-100 text-admin-gray-800;
+}
+
+.invoice-status.generated {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.invoice-status.submitted {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.invoice-status.delivered {
+  @apply bg-compliance-green-100 text-compliance-green-800;
+}
+
+.invoice-status.failed {
+  @apply bg-urgent-red-100 text-urgent-red-800;
+}
+
+/* Loading states */
+.loading-spinner {
+  @apply animate-spin rounded-full h-4 w-4 border-b-2 border-french-blue-600;
+}
+
+/* French specific print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

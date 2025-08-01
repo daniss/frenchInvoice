@@ -1,0 +1,52 @@
+{
+  "name": "frenchinvoice",
+  "version": "1.0.0",
+  "description": "A production-ready French e-invoicing solution built with Supabase Edge Functions and Deno/TypeScript. Fully compliant with EN16931 European standard and French business regulations.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniss/frenchInvoice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniss/frenchInvoice/issues"
+  },
+  "homepage": "https://github.com/daniss/frenchInvoice#readme",
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.53.0",
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "^9.32.0",
+    "eslint-config-next": "^15.4.5",
+    "lucide-react": "^0.534.0",
+    "next": "^15.4.5",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.61.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.8.3",
+    "zod": "^4.0.14"
+  }
+}
